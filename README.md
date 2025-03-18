@@ -1,7 +1,7 @@
 ##  Image Orientation Detection Using ResNet
 
 
-Try it in Google Colab [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1VQ0U_WUIAObFzZtm9WEQWap8i6C6NMHW?usp=sharing)
+Try it in [Replicate](https://replicate.com/grace-raper/resnet-rot)!
 
 Or download the model from [GitHub Releases](https://github.com/parsapoorsh/resnet-ixion/releases):
 
