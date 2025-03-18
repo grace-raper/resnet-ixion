@@ -1,0 +1,45 @@
+# Configuration for Cog ⚙️
+# Reference: https://cog.run/yaml
+
+build:
+  gpu: true
+  python_version: "3.12"
+  python_packages:
+    - "numpy==1.26.4"
+    - "onnxruntime-gpu==1.17.0"
+    - "torch==2.3.1"
+    - "torchvision==0.18.1"
+    - "pillow==10.2.0"
+
+  # Download the ONNX model weights during build
+  run:
+    - "wget -q https://github.com/parsapoorsh/resnet-ixion/releases/download/1.0.0/resnet152_ixion_e3-fac493d9.onnx || echo 'Could not download model weights'"
+
+# Specify the predictor class
+predict: "predict.py:Predictor"
+
+#build:
+#  # set to true if your model requires a GPU
+#  gpu: false
+#
+#  # a list of ubuntu apt packages to install
+#  # system_packages:
+#  #   - "libgl1-mesa-glx"
+#  #   - "libglib2.0-0"
+#
+#  # python version in the form '3.11' or '3.11.4'
+#  python_version: "3.11"
+#
+#  # a list of packages in the format <package-name>==<version>
+#  # python_packages:
+#  #   - "numpy==1.19.4"
+#  #   - "torch==1.8.0"
+#  #   - "torchvision==0.9.0"
+#
+#  # commands run after the environment is setup
+#  # run:
+#  #   - "echo env is ready!"
+#  #   - "echo another command if needed"
+#
+## predict.py defines how predictions are run on your model
+#predict: "predict.py:Predictor"
